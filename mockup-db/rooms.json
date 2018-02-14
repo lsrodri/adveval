@@ -1,0 +1,740 @@
+{
+  "rooms": [
+    {
+      "name": "Salle #1",
+      "description": "Salle #1",
+      "capacity": 5,
+      "picture": "/img/room0.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-07T12:39:29.812Z",
+      "updatedAt": "2016-12-08T17:31:39.489Z"
+    },
+    {
+      "name": "Salle #2",
+      "description": "Salle #2",
+      "capacity": 10,
+      "picture": "/img/room1.jpg",
+      "equipment": [
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-07T12:39:55.384Z",
+      "updatedAt": "2016-12-07T13:33:37.184Z"
+    },
+    {
+      "name": "Salle Okjsdkso",
+      "description": "Salle Okjsdkso",
+      "capacity": 11,
+      "picture": "/img/room2.jpg",
+      "equipment": [],
+      "available": true,
+      "createdA  t": "2016-12-07T14:15:55.733Z",
+      "updatedAt": "2016-12-09T16:45:19.025Z"
+    },
+    {
+      "name": "Salle de ouf",
+      "description": "Salle de ouf",
+      "capacity": 10,
+      "picture": "/img/room3.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:34.419Z",
+      "updatedAt": "2016-12-09T16:45:34.419Z"
+    },
+    {
+      "name": "Salle nulle",
+      "description": "Salle nulle",
+      "capacity": 26,
+      "picture": "/img/room4.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle nulle",
+      "description": "Salle nulle",
+      "capacity": 26,
+      "picture": "/img/room5.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle nulle",
+      "description": "Salle nulle",
+      "capacity": 26,
+      "picture": "/img/room6.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle Monster Truck",
+      "description": "Salle Monster Truck",
+      "capacity": 10,
+      "picture": "/img/room1.jpg",
+      "equipment": [
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-07T12:39:55.384Z",
+      "updatedAt": "2016-12-07T13:33:37.184Z"
+    },
+    {
+      "name": "Salle Bobsled",
+      "description": "Salle Bobsled",
+      "capacity": 11,
+      "picture": "/img/room2.jpg",
+      "equipment": [],
+      "available": true,
+      "createdA  t": "2016-12-07T14:15:55.733Z",
+      "updatedAt": "2016-12-09T16:45:19.025Z"
+    },
+    {
+      "name": "Salle Minivan",
+      "description": "Salle Minivan",
+      "capacity": 10,
+      "picture": "/img/room3.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:34.419Z",
+      "updatedAt": "2016-12-09T16:45:34.419Z"
+    },
+    {
+      "name": "Salle Rickshaw",
+      "description": "Salle Rickshaw",
+      "capacity": 26,
+      "picture": "/img/room4.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle Limousine",
+      "description": "Salle Limousine",
+      "capacity": 26,
+      "picture": "/img/room5.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle Convertible",
+      "description": "Salle Convertible",
+      "capacity": 26,
+      "picture": "/img/room6.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle Caravan",
+      "description": "Salle Caravan",
+      "capacity": 10,
+      "picture": "/img/room1.jpg",
+      "equipment": [
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-07T12:39:55.384Z",
+      "updatedAt": "2016-12-07T13:33:37.184Z"
+    },
+    {
+      "name": "Salle Hoverboard",
+      "description": "Salle Hoverboard",
+      "capacity": 11,
+      "picture": "/img/room2.jpg",
+      "equipment": [],
+      "available": true,
+      "createdA  t": "2016-12-07T14:15:55.733Z",
+      "updatedAt": "2016-12-09T16:45:19.025Z"
+    },
+    {
+      "name": "Salle Tricycle",
+      "description": "Salle Tricycle",
+      "capacity": 10,
+      "picture": "/img/room3.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:34.419Z",
+      "updatedAt": "2016-12-09T16:45:34.419Z"
+    },
+    {
+      "name": "Salle Skateboard",
+      "description": "Salle Skateboard",
+      "capacity": 26,
+      "picture": "/img/room4.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle BMX",
+      "description": "Salle BMX",
+      "capacity": 26,
+      "picture": "/img/room5.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle Taxi",
+      "description": "Salle Taxi",
+      "capacity": 26,
+      "picture": "/img/room6.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle Paddleboard",
+      "description": "Salle Paddleboard",
+      "capacity": 10,
+      "picture": "/img/room1.jpg",
+      "equipment": [
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-07T12:39:55.384Z",
+      "updatedAt": "2016-12-07T13:33:37.184Z"
+    },
+    {
+      "name": "Salle Caravel",
+      "description": "Salle Caravel",
+      "capacity": 11,
+      "picture": "/img/room2.jpg",
+      "equipment": [],
+      "available": true,
+      "createdA  t": "2016-12-07T14:15:55.733Z",
+      "updatedAt": "2016-12-09T16:45:19.025Z"
+    },
+    {
+      "name": "Salle Water Scooter",
+      "description": "Salle Water Scooter",
+      "capacity": 10,
+      "picture": "/img/room3.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:34.419Z",
+      "updatedAt": "2016-12-09T16:45:34.419Z"
+    },
+    {
+      "name": "Salle Lifeboat",
+      "description": "Salle Lifeboat",
+      "capacity": 26,
+      "picture": "/img/room4.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle Hydroplane",
+      "description": "Salle Hydroplane",
+      "capacity": 26,
+      "picture": "/img/room5.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle Submarine",
+      "description": "Salle Submarine",
+      "capacity": 26,
+      "picture": "/img/room6.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle Sailboat",
+      "description": "Salle Sailboat",
+      "capacity": 10,
+      "picture": "/img/room1.jpg",
+      "equipment": [
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-07T12:39:55.384Z",
+      "updatedAt": "2016-12-07T13:33:37.184Z"
+    },
+    {
+      "name": "Salle Lightvessel",
+      "description": "Salle Lightvessel",
+      "capacity": 11,
+      "picture": "/img/room2.jpg",
+      "equipment": [],
+      "available": true,
+      "createdA  t": "2016-12-07T14:15:55.733Z",
+      "updatedAt": "2016-12-09T16:45:19.025Z"
+    },
+    {
+      "name": "Salle Water Ski",
+      "description": "Salle Water Ski",
+      "capacity": 10,
+      "picture": "/img/room3.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:34.419Z",
+      "updatedAt": "2016-12-09T16:45:34.419Z"
+    },
+    {
+      "name": "Salle Frigate",
+      "description": "Salle Frigate",
+      "capacity": 26,
+      "picture": "/img/room7.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle nulle",
+      "description": "Salle nulle",
+      "capacity": 26,
+      "picture": "/img/room8.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle nulle",
+      "description": "Salle nulle",
+      "capacity": 26,
+      "picture": "/img/room6.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle #2",
+      "description": "Salle #2",
+      "capacity": 10,
+      "picture": "/img/room1.jpg",
+      "equipment": [
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-07T12:39:55.384Z",
+      "updatedAt": "2016-12-07T13:33:37.184Z"
+    },
+    {
+      "name": "Salle Okjsdkso",
+      "description": "Salle Okjsdkso",
+      "capacity": 11,
+      "picture": "/img/room2.jpg",
+      "equipment": [],
+      "available": true,
+      "createdA  t": "2016-12-07T14:15:55.733Z",
+      "updatedAt": "2016-12-09T16:45:19.025Z"
+    },
+    {
+      "name": "Salle de ouf",
+      "description": "Salle de ouf",
+      "capacity": 10,
+      "picture": "/img/room7.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:34.419Z",
+      "updatedAt": "2016-12-09T16:45:34.419Z"
+    },
+    {
+      "name": "Salle nulle",
+      "description": "Salle nulle",
+      "capacity": 26,
+      "picture": "/img/room4.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle nulle",
+      "description": "Salle nulle",
+      "capacity": 26,
+      "picture": "/img/room5.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle nulle",
+      "description": "Salle nulle",
+      "capacity": 26,
+      "picture": "/img/room6.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle #2",
+      "description": "Salle #2",
+      "capacity": 10,
+      "picture": "/img/room8.jpg",
+      "equipment": [
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-07T12:39:55.384Z",
+      "updatedAt": "2016-12-07T13:33:37.184Z"
+    },
+    {
+      "name": "Salle Okjsdkso",
+      "description": "Salle Okjsdkso",
+      "capacity": 11,
+      "picture": "/img/room2.jpg",
+      "equipment": [],
+      "available": true,
+      "createdA  t": "2016-12-07T14:15:55.733Z",
+      "updatedAt": "2016-12-09T16:45:19.025Z"
+    },
+    {
+      "name": "Salle de ouf",
+      "description": "Salle de ouf",
+      "capacity": 10,
+      "picture": "/img/room3.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:34.419Z",
+      "updatedAt": "2016-12-09T16:45:34.419Z"
+    },
+    {
+      "name": "Salle nulle",
+      "description": "Salle nulle",
+      "capacity": 26,
+      "picture": "/img/room4.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle nulle",
+      "description": "Salle nulle",
+      "capacity": 26,
+      "picture": "/img/room5.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle nulle",
+      "description": "Salle nulle",
+      "capacity": 26,
+      "picture": "/img/room6.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle #2",
+      "description": "Salle #2",
+      "capacity": 10,
+      "picture": "/img/room1.jpg",
+      "equipment": [
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-07T12:39:55.384Z",
+      "updatedAt": "2016-12-07T13:33:37.184Z"
+    },
+    {
+      "name": "Salle Okjsdkso",
+      "description": "Salle Okjsdkso",
+      "capacity": 11,
+      "picture": "/img/room2.jpg",
+      "equipment": [],
+      "available": true,
+      "createdA  t": "2016-12-07T14:15:55.733Z",
+      "updatedAt": "2016-12-09T16:45:19.025Z"
+    },
+    {
+      "name": "Salle de ouf",
+      "description": "Salle de ouf",
+      "capacity": 10,
+      "picture": "/img/room3.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:34.419Z",
+      "updatedAt": "2016-12-09T16:45:34.419Z"
+    },
+    {
+      "name": "Salle nulle",
+      "description": "Salle nulle",
+      "capacity": 26,
+      "picture": "/img/room4.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    },
+    {
+      "name": "Salle nulle",
+      "description": "Salle nulle",
+      "capacity": 26,
+      "picture": "/img/room5.jpg",
+      "equipment": [
+        {
+          "name": "TV"
+        },
+        {
+          "name": "Retro Projecteur"
+        }
+      ],
+      "available": true,
+      "createdAt": "2016-12-09T16:45:49.096Z",
+      "updatedAt": "2016-12-09T16:45:49.096Z"
+    }
+  ]
+}

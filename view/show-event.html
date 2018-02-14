@@ -1,0 +1,61 @@
+<ng-include src="'view/header.html'" ng-controller="headerCtrl"></ng-include>
+<ng-include src="'view/sidebar.html'" ng-controller="sidebarCtrl"></ng-include>
+
+
+<div id="ShowRooms" class="col-sm-9">
+    <div id="Loading" class="load" ng-show="loading">
+        <div class="container-fluid">
+            <div class="row">
+                 <p>Loading...</p>
+                 <i class="settings icon"></i>
+            </div>
+        </div>
+    </div>
+    <div id="mainShowRooms" ng-show="!loading">
+        <div class="container-fluid">
+            <div id="eventGallery">
+                <div class="col-sm-4">
+                    <img id="eventPic" ng-src="{{event.cover.source}}">
+                </div>
+                <div class="col-sm-8">
+                    <h5 id="eventName">{{event.name}}</h5>
+                    <div class="event-item-info">
+                        <i class="fa fa-clock-o"></i>
+                        {{event.start_time | date:'dd/MM/yyyy - HH:mm':"+0200" }} - {{event.end_time | date:'HH:mm':"+0200"}}
+                    </div> 
+                    <div class="event-item-info">
+                        <i class="fa fa-check"></i>
+                        {{event.attending_count}}
+                    </div> 
+                    <div class="event-item-info">
+                        <i class="fa fa-map-pin"></i>
+                        {{event.place.name}}
+                    </div>
+                    <button 
+                        type="button"
+                        ng-click="addEvent(event.id,event.name,event.start_time,event.cover.source)"
+                        class="add-event">
+                        <i class="fa fa-plus"></i>
+                        Save
+                    </button>
+                    <div id="eventText">
+                        <p id="eventType">{{event.category}}</p>
+                        <p>{{event.description}}</p>
+                    </div>
+
+                    <ng-map id="map" zoom="12" center="[{{event.place.location.latitude}}, {{event.place.location.longitude}}]">
+                        <marker position="[{{event.place.location.latitude}}, {{event.place.location.longitude}}]" title="Venue"></marker>
+                    </ng-map>
+                </div>
+            </div>
+        </div>
+        <button id="backBtn" class="btn btn-info" ng-click="doTheBack()"> < </button>
+        <button
+            id="addBtn"
+            class="btn btn-info"
+            ng-click="addEvent(event.id,event.name,event.start_time,event.cover.source)">
+            ADD TO MY EVENTLIST
+        </button>
+    </div>    
+</div>
+

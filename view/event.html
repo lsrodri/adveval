@@ -1,0 +1,34 @@
+<ng-include src="'view/event.html'" ng-controller="eventCrtl"> </ng-include>
+
+    <div id="EventDesc">
+       <div id="Loading" class="load"> 
+            <div class="container-fluid">
+                <div class="row">
+                    <p>Loading...</p>
+                    <img src="spinner.gif">
+                </div>
+            </div>
+        </div>
+        <div id="mainEventDesc">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-06">
+                        <img id="evntImg" src="">
+                        <h3>Date:</h3>
+                        <h3>Cost:</h3>
+                        <h3>Eventtype:</h3>
+                        <h3>Eventhomepage:</h3>
+                        <button id="addBtn" class="btn btn-info">Add</button>
+                        <button id="printBtn" class="btn btn-info">Print</button>
+                        <button id="goBack" class="btn btn-info">Back</button>
+                        <p id="eventDesc"></p>
+                    </div>
+                    <div class="col-md-06">
+                        <h4>Location: </h4>
+                        <div id="map">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

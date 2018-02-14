@@ -1,0 +1,160 @@
+<ng-include src="'view/header.html'" ng-controller="headerCtrl"></ng-include>
+
+<div class="Rooms-list col-xs-9">
+	<div class="col-xs-12 event-filter">
+		<form id="searchValues">
+			<div class="col-md-4">
+				Find a Meeting Room:
+			</div>
+	        <div id="dateDiv" class="col-md-4">
+	        	<label for="dateSelection">Date:</label>
+	            <input
+	            	ng-model="dateSelection"
+	            	ng-change="getRooms()"
+	            	id="dateSelection"
+	            	placeholder="Select a date"
+	            	type="date"
+	            	class="form-control"/>
+	        </div>
+	        <div class="col-md-4">
+	        	<label for="distance">Number of People:</label>
+	        	<output for="distance" id="distanceOutput">2 people</output>
+				<input 
+					ng-model="distance"
+					ng-change="getRooms()"
+					oninput="document.getElementById('distanceOutput').value = this.value"
+					type="range"
+					id="distance"
+					min="2"
+					max="50">
+	        </div>
+        </form>  
+	</div>
+
+	<div
+		class="loading-container"
+		ng-show="loading"
+		style="display:none;">
+		<div class="loading-text">
+			<div class="loaderIcon"></div>
+			Loading ...
+		</div>
+	</div>
+	
+	<!--
+		Emmet did the mindless work of creating 48 room divs
+		div.col-md-2.room-container*6>div.col-xs-6.individual-room[data-id="$"][ng-click="displayRoom()"]*4>i.fa.fa-square.fa-3x
+		I could have generated it through some JavaScript loops, but at this level of number of instances,
+		it won't affect performance, and it was much easier to visualize and develop quickly for a mockup
+	-->
+	<div class="col-xs-12 room-row-container">
+		<div class="col-xs-3 col-md-12 room-container second-floor">
+			<div class="col-md-1 individual-room" data-id="1" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="2" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="3" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="4" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="5" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="6" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="7" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="8" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="9" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="10" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="11" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="12" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+		</div>
+		<div class="col-xs-3 col-md-12 room-container first-floor">
+			<div class="col-md-1 individual-room" data-id="13" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="14" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="15" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="16" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="17" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="18" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="19" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="20" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="21" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="22" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="23" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="24" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+		</div>
+		<div class="col-xs-3 col-md-12 room-container first-floor">
+			<div class="col-md-1 individual-room" data-id="25" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="26" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="27" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="28" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="29" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="30" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="31" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="32" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="33" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="34" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="35" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="36" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+		</div>
+		<div class="col-xs-3 col-md-12 room-container second-floor">
+			<div class="col-md-1 individual-room" data-id="37" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="38" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="39" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="40" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="41" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="42" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="43" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="44" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="45" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="46" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="47" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+			<div class="col-md-1 individual-room" data-id="48" ng-click="displayRoom()"><i class="fa fa-square fa-3x"></i></div>
+		</div>
+	</div>
+	<div
+		ng-show="!loading" 
+		class="Rooms-container">
+		
+		<div 
+			ng-repeat="event in Rooms.Rooms"
+			class="col-xs-12 event-item">
+			<div class="col-xs-2 event-picture">
+				<img ng-src="{{event.profilePicture}}" alt="{{event.name}}">
+			</div>
+			<div class="col-xs-10">
+				<div>
+					<h4>
+						<a ng-href="#!/ShowEvent/{{event.id}}">{{event.name}}</a>
+					</h4>
+					<div class="event-description">
+						{{event.description | limitTo:320 }} ...
+					</div>
+					<div class="event-item-info">
+						<i class="fa fa-location-arrow"></i>
+						{{event.distance}}m
+					</div> 
+					<div class="event-item-info">
+						<i class="fa fa-clock-o"></i>
+						{{event.startTime | date:'dd/MM/yyyy - HH:mm':"+0200" }} - {{event.endTime | date:'HH:mm':"+0200"}}
+					</div> 
+					<div class="event-item-info">
+						<i class="fa fa-check"></i>
+						{{event.stats.attending}}
+					</div> 
+					<div class="event-item-info">
+						<i class="fa fa-map-pin"></i>
+						{{event.Place.name}}
+					</div>
+					<button 
+						type="button"
+						ng-click="addEvent(event.id,event.name,event.startTime,event.profilePicture)"
+						class="add-event">
+						<i class="fa fa-plus"></i>
+						Save
+					</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div 
+		ng-show="noRooms"
+		class="no-Rooms col-xs-12">
+			No Rooms were found
+	</div>
+</div>

@@ -1,0 +1,11 @@
+<ng-include src="'view/header.html'" ng-controller="headerCtrl"></ng-include>
+<ng-include src="'view/sidebar.html'" ng-controller="sidebarCtrl"></ng-include>
+
+<div id="Profile" class="col-xs-9">
+	<div class="user-picture col-md-2">
+     	<img ng-src="{{avatar}}" alt="{{name}}">
+    </div>
+	<div class="user-name2 col-md-10">
+		{{name}}
+	</div>
+</div>

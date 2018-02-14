@@ -1,0 +1,40 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div id="HeaderView" class="col-xs-12">
+    <div class="col-sm-4"> 
+        <div id="headerH" class="logo">
+        	<a href="#!/Home">
+                <img src="img/logo-white.svg">
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-8 header-right">
+
+        <div class="alert-container">
+            <div 
+                ng-repeat="alert in alerts"
+                class="alert-message alert {{alert.type}}">
+                <button
+                    ng-click="closeAlert($index)"
+                    type="button"
+                    class="close"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{ alert.msg }}
+            </div>    	
+        </div>
+        
+        <div class="user-profile">
+        	<div class="user-name">{{name}}</div>
+            <div class="dropdown">
+              <img id="menuarrow" ng-click="dropdown()" class="dropbtn" src="Images/menuarrow.png"></img>
+              <div id="myDropdown" class="dropdown-content pull-left">
+                <a href="#!/Profile/">Profile</a>
+                <a href="#!/Help">Help</a>
+              </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

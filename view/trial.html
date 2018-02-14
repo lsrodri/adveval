@@ -1,0 +1,22 @@
+<div id="Trial" class="col-sm-12">
+    <div id="Loading" class="load" ng-show="loading">
+        <div class="container-fluid">
+            <div class="row">
+                 <p>Loading...</p>
+                 <i class="settings icon"></i>
+            </div>
+        </div>
+    </div>
+    <div id="mainTrial" ng-show="!loading">
+        <div 
+            ng-repeat="imageItem in imageGrid track by $index"
+            ng-class="imageGridClass">
+            <img 
+                ng-src="{{imageItem}}"
+                ng-click="checkOdd($index)" />
+        </div>
+        <div class="col-xs-12">
+            <input class="timer-stopper">
+        </div>
+    </div>
+</div>

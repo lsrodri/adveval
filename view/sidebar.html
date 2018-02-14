@@ -1,0 +1,38 @@
+
+<div id="Sidebar" class="col-sm-3" ng-controller="sidebarCtrl">
+        
+    <div id="eventList" class="container-fluid">
+        <div class="col-xs-12">
+            <h4>
+                <i class="fa"></i>
+                My Rooms
+            </h4>
+        </div>
+        <div class="my-Rooms-item" ng-repeat="(id, event) in myRooms">
+            <div class="col-xs-3 my-Rooms-image">
+                <img ng-src="{{event.eventImage}}" alt="{{event.eventName}}">
+            </div>
+            <div class="col-xs-7 my-Rooms-text">
+                <div>
+                    {{event.eventDate | date:'dd/MM/yyyy - HH:mm':"+0200"}}
+                </div>
+                <div>
+                    <a ng-href="#!/ShowEvent/{{event.eventId}}">
+                        {{event.eventName}}
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <button
+                    class="btn remove-event"
+                    ng-click="removeEvent(id)">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    
+</div> 
+

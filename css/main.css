@@ -1,0 +1,589 @@
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#mainTrial {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#mainTrial > div {
+    float:left;
+    padding: 2rem;
+}
+
+.trial-item-9 {
+    width:33.333%;
+}
+
+.trial-item-16 {
+    width:25%%;
+}
+
+.trial-item-25 {
+    width:20%;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.loading-text {
+    color: white;
+    font-family: Helvetica;
+    font-size: 80px;
+    padding-left: 35%;
+    padding-top: 20%;
+    text-shadow: 3px 3px grey;
+    font-weight: lighter;
+}
+.loaderIcon {
+    margin-left: 12%;
+    margin-top: 2%;
+    border: 13px solid white;
+    border-radius: 100%;
+    border-top: 13px solid grey;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 20s linear infinite;
+    animation: spin 2s linear infinite;
+}
+label {
+    color: white;
+}
+h1 {
+    color: black;
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+    font-family: Helvetica;
+    font-weight: lighter;
+    font-size: 85px;
+    padding-top: 2%;
+    text-shadow: 2px 2px #2F4F4F;
+}
+h4 {
+    text-transform: uppercase;
+    font-family: Helvetica;
+    text-decoration: #2F4F4F;
+    font-weight: lighter;
+    font-size: 20px;
+    text-align: center;
+}
+input.form-control,
+button.btn,
+select.form-control {
+    border-radius: 0;
+    font-size: 13px;
+}
+select.form-control {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+}
+h5 {
+    color: white;
+    font-style: lighter;
+    font-family: Helvetica;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+hr {
+    color: white;
+}
+p {
+    font-family: Arial;
+    font-family: Helvetica;
+    font-style: lighter;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+
+#eventList {
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+.btn-info {
+    background-color: #2F4F4F;
+    text-align: center;
+    position: center;
+    color: white;
+    background-color: rgb(56, 60, 70);
+    border-color: rgb(56, 60, 70);
+}
+.btn-info:hover {
+    background-color: rgb(100, 100, 100);
+    border-color: rgb(100, 100, 100);
+}
+.btn-info {
+    text-align: center;
+    position: center;
+    color: white;
+    background-color: rgb(56, 60, 70);
+    border-color: rgb(56, 60, 70);
+}
+.btn-info:hover {
+    background-color: rgb(100, 100, 100);
+    border-color: rgb(100, 100, 100);
+}
+.remove-event {
+    background-color: #4d0000;
+    border-radius: 3rem;
+}
+#backBtn {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.form-control {
+    font-weight: lighter;
+    font-size: 11px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+#mainShowEvents {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 30px;
+}
+.form-control {
+    color: black;
+    font-family: Helvetica;
+    font-weight: lighter;
+    font-size: 11px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.facebook-login {
+    background-color: #3b5998;
+    border-color: white;
+}
+#HeaderView {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-repeat: repeat;
+    background-origin: border-box;
+}
+#HeaderView {
+    color: #fff;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-repeat: repeat;
+    background-origin: border-box;
+    color: #fff;
+    padding: 15px 0;
+}
+.event-item {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 10px 0;
+    padding: 15px 0;
+    color: white;
+}
+.event-item a {
+    color: white;
+    font-family: Helvetica;
+    font-size: 25px;
+    text-transform: lighter;
+}
+.logo img {
+    height: 100%;
+    width: auto;
+}
+.login-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 20% auto 0;
+    max-width: 360px;
+    min-height: 150px;
+}
+output {
+    display: inline;
+    color: lightgrey;
+}
+.event-filter {
+    color: grey;
+    font-family: Helvetica;
+    font-weight: lighter;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 30px;
+    padding: 15px 0;
+}
+#eventDesc {
+    padding-bottom: 30px;
+    padding-top: 15px;
+    padding-left: 3px;
+}
+.header-right {
+    text-align: right;
+}
+.user-name {
+    display: inline-block;
+    height: 40px;
+    padding-right: 5px;
+    font-weight: lighter;
+}
+.user-avatar {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+}
+.user-avatar img {
+    width: 100%;
+    height: auto;
+}
+.dropbtn {
+    background-color: gray;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: black;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0px;
+    background-color: gray;
+    min-width: 130px;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+    font-family: Arial;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+.show {
+    display: block;
+}
+.user-name2 {
+    color: white;
+    font-size: 40px;
+}
+#menuarrow {
+    height: 40px;
+    width: 40px;
+}
+.event-item-info {
+    display: inline;
+    padding: 2px 4px;
+    background-color: #000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    margin-right: 5px;
+}
+.event-description {
+    padding-bottom: 10px;
+}
+.event-picture img,
+.my-events-item img {
+    width: 100%;
+    height: auto;
+}
+.add-event {
+    background-color: white;
+    color: black;
+    border: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+.my-events-item {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding-top: 10px;
+}
+.my-events-item a {
+    color: white;
+    font-weight: bold;
+}
+.my-events-text,
+.my-events-image {
+    padding-left: 0;
+}
+.event-item-info {
+    display: inline;
+    padding: 2px 4px;
+    background-color: #000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    margin-right: 5px;
+}
+.event-description {
+    padding-bottom: 10px;
+}
+.event-picture img,
+.my-events-item img {
+    width: 100%;
+    height: auto;
+}
+.add-event {
+    background-color: white;
+    color: black;
+    border: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+
+.my-events-item {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding-top: 10px;
+}
+.my-events-item a {
+    color: white;
+    font-weight: bold;
+}
+.my-events-text,
+.my-events-image {
+    padding-left: 0;
+}
+.alert-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    z-index: 9999;
+}
+.alert-message {
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+}
+.alert-message + .alert-message {
+    margin-top: 10px;
+}
+.alert-message.alert-warning {
+    background-color: rgba(252, 248, 227, 0.9);
+}
+.alert-message.alert-success {
+    background-color: rgba(223, 240, 216, 0.9);
+}
+.alert-message.alert-info {
+    background-color: rgba(217, 237, 247, 0.9);
+}
+#Profile {
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+#Help {
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+#eventGallery {
+    padding-top: 20px;
+}
+#eventGallery img {
+    max-width: 100%;
+    height: auto;
+}
+#eventGallery .event-item-info {
+    color: white;
+}
+#Help {
+    text-align: center;
+}
+#Help h1 {
+    color: white;
+}
+#Help h3 {
+    font-weight: lighter;
+}
+.login-container .logo img {
+    width: 100%;
+    height: auto;
+}
+.login-container .logo {
+    padding-top: 15px;
+}
+.login-container .login-button {
+    margin-top: 50px;
+}
+.login-container .login-button button {
+    border: none;
+}
+#eventText {
+    padding: 15px 0;
+}
+.view-mode button {
+    background: none;
+    border: none;
+    outline: none;
+}
+.view-mode i {
+    color: #fff;
+    text-align: right;
+    font-size: 23px;
+    margin-left: 3px;
+    padding: 5px;
+}
+.view-mode i.selected {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.events-container.map,
+.events-container.map ng-map {
+    min-height: 300px;
+    width: 100%;
+}
+
+/* Reversing the order of columns to make rooms face each other in the same way vertically */
+.room-row-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.room-container:nth-child(even) .individual-room{
+    text-align: right;
+}
+
+.room-container:nth-child(odd) .individual-room {
+    text-align: left;
+}
+
+.first-floor {
+    background-color: #FFFBB8;
+}
+
+.second-floor {
+    background-color: #E5F2F2;
+}
+
+.individual-room:nth-child(odd) i {
+    amargin-top: 40px;
+}
+
+/* Writing a different rule for it for >= md */
+
+@media (min-width: 992px) {
+    .room-row-container {
+        flex-direction: unset;
+    }
+
+    .room-container .individual-room:nth-child(even) {
+        text-align: left;
+    }
+
+    .room-container .individual-room:nth-child(odd) {
+        text-align: right;
+    }
+
+}
+
+.individual-room {
+    height: 50px;
+}
+
+/* Copied from Bootstrap 4 and adapted to Bootstrap 3, which is the grid I am using */
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+@media (min-width: 768px) {
+  .float-sm-left {
+    float: left !important;
+  }
+  .float-sm-right {
+    float: right !important;
+  }
+  .float-sm-none {
+    float: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .float-md-left {
+    float: left !important;
+  }
+  .float-md-right {
+    float: right !important;
+  }
+  .float-md-none {
+    float: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .float-lg-left {
+    float: left !important;
+  }
+  .float-lg-right {
+    float: right !important;
+  }
+  .float-lg-none {
+    float: none !important;
+  }
+}

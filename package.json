@@ -1,0 +1,13 @@
+{
+  "name": "dinner",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {
+    "facebook-events-by-location-core": "^0.1.5"
+  }
+}
