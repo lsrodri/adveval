@@ -1,4 +1,4 @@
-eventPlannerApp.controller('trialCtrl', function ($scope,$routeParams,$location,trialService, $timeout) {
+eventPlannerApp.controller('trialCtrl', function ($scope,$routeParams,$location,trialService, $timeout, $window) {
 
 	var oddItemPosition = -1;
 	var objectCount = -1;
@@ -32,8 +32,11 @@ eventPlannerApp.controller('trialCtrl', function ($scope,$routeParams,$location,
 	}
 
 	$scope.doNextAction = function(){
+
 		if($scope.nextAction == "Next") {
-			$location.path(nextTrial);
+
+			$window.location.href = "#!" + nextTrial;
+
 		} else {
 			// reload the view so the user can try it again
 			location.reload();
@@ -60,7 +63,7 @@ eventPlannerApp.controller('trialCtrl', function ($scope,$routeParams,$location,
 					vvChange + "," +
 					new Date().toJSON() );
 				$scope.nextAction = "Next";
-				$(".status-message").html("Click on the <strong>Next</strong> button below to move on to the following trial");
+				$(".status-message").html("Click on the <strong>Next</strong> button below or press <strong>Enter</strong> to move on to the following trial");
 
 			} else {
 				// Write a record with elapsed time and number of errors
@@ -71,8 +74,7 @@ eventPlannerApp.controller('trialCtrl', function ($scope,$routeParams,$location,
 					vvChange + "," +
 					new Date().toJSON() );
 				$scope.nextAction = "Retry";
-				$(".status-message").html("Click on <strong>Retry</strong> to try it again.");
-
+				$(".status-message").html("Click on <strong>Retry</strong> or press <strong>Enter</strong> to try it again.");
 			}
 		}
 	}
@@ -132,6 +134,11 @@ eventPlannerApp.controller('trialCtrl', function ($scope,$routeParams,$location,
 	    	$("." + $scope.imageGridClass + " img").attr("src","img/gray-cross.png").addClass("clickable");
 	    	$scope.checkPhase = true;
 	    	$(".status-message").html("Click on the location where you saw an object that looked different from the rest.");
+	    }
+
+	    if(event.which === 13 && $scope.nextAction != "") {
+	    	event.preventDefault();
+	    	$scope.doNextAction();
 	    }
 	});
 
