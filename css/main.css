@@ -15,6 +15,10 @@
     }
 }
 
+body {
+    padding: 2rem;
+}
+
 #mainTrial {
     width: 50%;
     margin: auto;
@@ -31,7 +35,7 @@
 }
 
 .trial-item-16 {
-    width:25%%;
+    width:25%;
 }
 
 .trial-item-25 {
@@ -62,9 +66,18 @@
     -webkit-animation: spin 20s linear infinite;
     animation: spin 2s linear infinite;
 }
-label {
-    color: white;
+
+.practice-selection, .trial-selection {
+    border: 1px solid #ccc;
+    background-color: #eee;
+    padding: 3rem;
+    margin: 2rem 0;
 }
+
+.padding-15 {
+    padding: 15px;
+}
+
 h1 {
     color: black;
     text-align: center;

@@ -1,4 +1,4 @@
-eventPlannerApp.controller('trialCtrl', function ($scope,$routeParams,$location,trialService, $timeout) {
+eventPlannerApp.controller('practiceCtrl', function ($scope,$routeParams,$location,trialService,$timeout) {
 
 	var oddItemPosition = -1;
 	var objectCount = -1;
@@ -8,6 +8,7 @@ eventPlannerApp.controller('trialCtrl', function ($scope,$routeParams,$location,
 	var trialId = "";
 	var previousErrors = 0;
 	var nextTrial = "";
+	var vvChangeArray = [];
 
 	$scope.imageGrid = [];
 	$scope.loading = false;
@@ -22,10 +23,8 @@ eventPlannerApp.controller('trialCtrl', function ($scope,$routeParams,$location,
 		var participantInt = parseInt($scope.participant);
 		var blockInt = parseInt($scope.block);
 		var trialInt = parseInt($scope.trial);
-		if(trialInt < 14){
-			nextTrial = "/Trial/" + participantInt + "/" + blockInt + "/" + ++trialInt;
-		} else if (blockInt < 3) {
-			nextTrial = "/Trial/" + participantInt + "/" + ++blockInt + "/0";
+		if(trialInt < 2){
+			nextTrial = "/Practice/" + participantInt + "/" + blockInt + "/" + ++trialInt;
 		} else {
 			nextTrial = "/Finished"
 		}
@@ -33,12 +32,12 @@ eventPlannerApp.controller('trialCtrl', function ($scope,$routeParams,$location,
 
 	$scope.doNextAction = function(){
 		if($scope.nextAction == "Next") {
-			//$timeout( function(){
+			$timeout( function(){
             	// move on to the next one
 				$location.path(nextTrial);
-        	//}, 2000);
-			//$("#mainTrial, .status-message").hide();
-			//$("#Trial").html('<img src="img/kitten.jpg"/>');
+        	}, 2000);
+			$("#mainTrial, .status-message").hide();
+			$("#Trial").html('<img src="img/kitten.jpg"/>');
 		} else {
 			// reload the view so the user can try it again
 			location.reload();
@@ -57,57 +56,45 @@ eventPlannerApp.controller('trialCtrl', function ($scope,$routeParams,$location,
 			$scope.findNext();
 			// If the user gets it correctly
 			if(selectedItem === oddItemPosition){
-				// Write a record with elapsed time and number of errors
-				localStorage.setItem(trialId,
-					elapsed + "," +
-					previousErrors + "," +
-					objectCount + "," +
-					vvChange + "," +
-					new Date().toJSON() );
 				$scope.nextAction = "Next";
 				$(".status-message").html("Click on the <strong>Next</strong> button below to move on to the following trial");
-
 			} else {
-				// Write a record with elapsed time and number of errors
-				localStorage.setItem(trialId,
-					0 + "," + 
-					++previousErrors + "," +
-					objectCount + "," +
-					vvChange + "," +
-					new Date().toJSON() );
 				$scope.nextAction = "Retry";
 				$(".status-message").html("Click on <strong>Retry</strong> to try it again.");
-
 			}
 		}
 	}
 
-	var getRandom = function(max)
-	{
+	var getRandom = function(max) {
 	    return Math.floor(Math.random() * max);
 	}
     
+	var isInArray = function(value, array) {
+	  return array.indexOf(value) > -1;
+	}
+
     trialService.getData($scope.participant, $scope.block, $scope.trial)
     	.then(function(result){
 
     		vvChange = result.VVChange;
     		objectCount = parseInt(result.ObjectCount);
-    		
+
     		for (var i = 0; i < objectCount; i++) {
     			$scope.imageGrid[i] = "img/item.png";
     		};
 
     		oddItemPosition = getRandom(objectCount);
-    		$scope.imageGrid[oddItemPosition] = "img/item-" + vvChange + ".png";
 
-    		if (vvChange == "VV1VV2") {
+    		$scope.imageGrid[oddItemPosition] = "img/item-" + vvChange + ".png";			
+
+			if (vvChange == "VV1VV2") {
 				
 				var vv1Count = 0;
 				var vv2Count = 0;
 				var oddCount = Math.sqrt(objectCount);
 
 				
-				while (vv1Count < Math.sqrt(objectCount)) {
+				while (vv1Count < Math.sqrt(objectCount) + 1) {
 				  attemptedNumber = getRandom(objectCount);
 				  if ($scope.imageGrid[attemptedNumber] == "img/item.png") {
 				  	$scope.imageGrid[attemptedNumber] = "img/item-VV1.png";
@@ -115,7 +102,7 @@ eventPlannerApp.controller('trialCtrl', function ($scope,$routeParams,$location,
 				  }
 				}
 
-				while (vv2Count < Math.sqrt(objectCount)) {
+				while (vv2Count < Math.sqrt(objectCount) + 1) {
 				  attemptedNumber = getRandom(objectCount);
 				  if ($scope.imageGrid[attemptedNumber] == "img/item.png") {
 				  	$scope.imageGrid[attemptedNumber] = "img/item-VV2.png";

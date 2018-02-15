@@ -1,25 +1,6 @@
-eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, $location) {
-
-	$scope.participant = "0";
-	$scope.block = "1";
-	$scope.trial = "0";
-
-	$scope.enterTrial = function(){
-		$location.path("/Trial/" + $scope.participant + "/" + $scope.block  + "/" + $scope.trial);
-	}
-
-	$scope.exportToCsv = function() {
-
-		var rows = [];
-		var filename = "export.csv";
-		var output = "Participant,Block,Trial,SuccessTime,Errors,ObjectCount,VVChange,DateTime\n";
-		
-		for (var i = 0; i < localStorage.length; i++){
-			output += localStorage.key(i) + "," + localStorage.getItem(localStorage.key(i)) + "\n";
-		}
-	    
-		rows = $.csv.toArrays(output);
-
+eventPlannerApp.controller('csvCtrl', function ($scope, $routeParams, $window, $location) {
+	
+	function exportToCsv(filename, rows) {
         var processRow = function (row) {
             var finalVal = '';
             for (var j = 0; j < row.length; j++) {
@@ -59,5 +40,14 @@ eventPlannerApp.controller('homeCtrl', function ($scope, $routeParams, $window, 
             }
         }
     }
+    
+    
+    var output = "Participant,Block,Trial,SuccessTime,Errors,ObjectCount,VVChange,DateTime\n";
+	for (var i = 0; i < localStorage.length; i++){
+		output += localStorage.key(i) + "," + localStorage.getItem(localStorage.key(i)) + "\n";
+	}
+    
+	exportToCsv('export.csv', $.csv.toArrays(output));
 
-}); 
+
+});

@@ -11,6 +11,14 @@ eventPlannerApp.config(['$routeProvider',
          templateUrl: 'view/trial.html',
          controller: 'trialCtrl'
       }).
+      when('/Practice/:participant/:block/:trial',{
+         templateUrl: 'view/practice.html',
+         controller: 'practiceCtrl'
+      }).
+      when('/csv',{
+         templateUrl: 'view/csv.html',
+         controller: 'csvCtrl'
+      }).
       when('/Finished',{
          templateUrl: 'view/finished.html'
       }).
