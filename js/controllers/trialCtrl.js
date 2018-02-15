@@ -33,12 +33,7 @@ eventPlannerApp.controller('trialCtrl', function ($scope,$routeParams,$location,
 
 	$scope.doNextAction = function(){
 		if($scope.nextAction == "Next") {
-			//$timeout( function(){
-            	// move on to the next one
-				$location.path(nextTrial);
-        	//}, 2000);
-			//$("#mainTrial, .status-message").hide();
-			//$("#Trial").html('<img src="img/kitten.jpg"/>');
+			$location.path(nextTrial);
 		} else {
 			// reload the view so the user can try it again
 			location.reload();
